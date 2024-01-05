@@ -34,21 +34,26 @@
         </div>
         <div class="form__block">
             <div class="form">
-                <form action="form.php" method="post">
-                    <div class="form__div"><input type="text" class="inputs"></div>
-                    <div class="form__div">
-                        <div><label><input type="radio" name="sex" class="inp_rad" value="man"> мужчина</label></div>
-                        <div><label><input type="radio" name="sex" class="inp_rad" value="woman"> женщина</label></div>
-                    </div>
-                    <div class="form__div">
-                        <select name="city" id="ny">
-                            <option value="Moscow">Москва</option>
-                            <option value="Sanit-Petersburg">Санкт-Петербург</option>
-                            <option value="Novgorod">Новгород</option>
-                        </select>
-                    </div>
-                    <div class="form__div"><input type="submit" value="Отправить"></div>
-                </form>
+                <div class="form__left">
+
+                </div>
+                <div class="form__right">
+                    <form action="form.php" method="post">
+                        <div class="form__div"><input type="text" class="inputs"></div>
+                        <div class="form__div">
+                            <div class="radio_imp"><label><input type="radio" name="sex" class="inp_rad" value="man" checked> мужчина</label></div>
+                            <div class="radio_imp"><label><input type="radio" name="sex" class="inp_rad" value="woman"> женщина</label></div>
+                        </div>
+                        <div class="form__div">
+                            <select name="city" id="ny">
+                                <option value="Moscow">Москва</option>
+                                <option value="Sanit-Petersburg">Санкт-Петербург</option>
+                                <option value="Novgorod">Новгород</option>
+                            </select>
+                        </div>
+                        <div class="form__div"><input type="submit" value="Отправить"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
