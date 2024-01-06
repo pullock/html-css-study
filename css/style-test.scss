@@ -1,5 +1,21 @@
-$base-color: blue;
+%tpl_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-body {
-    color: $base-color;
+@mixin wh($width, $height){
+    width: $width;
+    height: $height;
+}
+
+div {
+    @extend %tpl_flex;
+    @include wh(100%, 100vh);
+    span {
+        color: gray;
+        &:hover {
+            color: purple;
+        }
+    }
 }
