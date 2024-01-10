@@ -8,7 +8,7 @@
   outline: none;
 }
 
-.header .inner-header .link-block .link-block__link .link__inner, .header .inner-header .link-block .link-block__link, .header .inner-header .logo, .header .inner-header, .header {
+.first-block .inner-first .left-block, .first-block .inner-first .right-block, .first-block .inner-first, .first-block, .header .inner-header .link-block .link-block__link .link__inner, .header .inner-header .link-block .link-block__link, .header .inner-header .logo, .header .inner-header, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,20 +40,43 @@
   height: 50px;
 }
 
+.first-block {
+  width: 100%;
+  height: 300px;
+}
+.first-block .inner-first {
+  width: 1200px;
+  height: 100%;
+}
+.first-block .inner-first .left-block, .first-block .inner-first .right-block {
+  width: 600px;
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 @media screen and (max-width: 1200px) {
+  .first-block .inner-first, .header .inner-header .link-block .link-block__link, .header .inner-header .link-block, .header .inner-header {
+    display: block;
+  }
   .header {
     width: 100%;
-    height: 200px;
+    height: auto;
   }
   .header .inner-header {
     width: 100%;
     height: 100%;
-    display: block;
   }
   .header .inner-header .logo {
     width: 100%;
-    height: 100%;
-    width: 100%;
+    height: 200px;
   }
   .header .inner-header .link-block {
     width: 100%;
@@ -61,11 +84,22 @@
   }
   .header .inner-header .link-block .link-block__link {
     width: 100%;
-    height: 50px;
-    display: block;
+    height: auto;
   }
   .header .inner-header .link-block .link-block__link .link__inner {
     width: 100%;
     height: 50px;
+  }
+  .first-block {
+    width: 100%;
+    height: auto;
+  }
+  .first-block .inner-first {
+    width: 1200px;
+    height: 100%;
+  }
+  .first-block .inner-first .left-block, .first-block .inner-first .right-block {
+    width: 100%;
+    height: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
