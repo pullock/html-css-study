@@ -1,3 +1,5 @@
+import test from 'app';
+
 new Vue({
     el: '.buttons',
     data: {
