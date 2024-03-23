@@ -8,37 +8,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css?v1.2347">
         <link rel="icon" href="" type="image/x-icon">
-        <title>Тренировка верстки Num: 2</title>
+        <title>Форма отправик заявки на ремонт</title>
     </head>
     <body>
-        <div class="header">
-            <div class="inner-header">
-                <div class="logo"></div>
-                <div class="link-block">
-                    <div class="link-block__link buttons">
-                        <div class="link__inner"><a href="">{{ button_1 }}</a></div>
-                        <div class="link__inner"><a href="">{{ button_2 }}</a></div>
-                        <div class="link__inner"><a href="">{{ button_3 }}</a></div>
-                    </div>
-                    <div class="link-block__link buttons_bottom">
-                        <div class="link__inner"><a href="">{{ button_1 }}</a></div>
-                        <div class="link__inner"><a href="">{{ button_2 }}</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="first-block">
-            <div class="inner-first">
-                <div class="left-block" id="app">
-                    <test></test>
-                </div>
-                <div class="right-block text">
-                    <div class="right-inner" style="background-color: black; color: white; padding: 10px 20px;" v-on:click="changeFunc">{{ change }}</div>
-                    <div class="right-inner"><img class="img" src="img/img_1.jpg" alt="Картинка"></div>
-                </div>
+        <div class="main__window">
+            <div class="form__window" id="add-zvonok">
+                <div class="text"><p>ЗАЯВКА НА РЕМОНТ ТЕХНИКИ</p></div>
+                <form>
+                    <div class=""><input type="hidden" name="type" value="Форма от КЦ"></div>
+                    <div><input type="text" name="name" required value="" placeholder="Имя"></div>
+                    <div><input type="text" data-phone-pattern name="tel" required value="" placeholder="+7(___)___-__-__"></div>
+                    <div><input type="text" name="city" required value="" placeholder="Город"></div>
+                    <div><textarea name="txt" id="" cols="30" rows="10" placeholder="Сообщение"></textarea></div>
+                    <div class="button"><input type="button" class="modal-submit" value="ОТПРАВИТЬ"></div>
+                </form>
+                <div class="policy" style="color: rgb(136, 32, 32);">Отправляя заявку из этой формы, Вы получаете скидку 10%</div>
+                <div class="policy"><a href="policy.html">Политика конфидициальности</a></div>
             </div>
         </div>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/index.js"></script>
 </html>

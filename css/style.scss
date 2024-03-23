@@ -10,136 +10,88 @@
     outline: none;
 }
 
-%tpl_flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+$bg-color: rgb(254, 254, 255);
+
+.formInner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto;
 }
 
-@mixin wh($width, $height){
-    width: $width;
-    height: $height;
-}
+.main__window {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: $bg-color;
 
-.header {
-    @extend %tpl_flex;
-    @include wh(100%, 100px);
+    .form__window {
+        max-width: 600px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 14px;
 
-    .inner-header {
-        @extend %tpl_flex;
-        @include wh(1200px, 100%);
-
-        .logo {
-            @extend %tpl_flex;
-            @include wh(400px, 100%);
+        .text {
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: rgb(63, 96, 154);
         }
 
-        .link-block {
-            @include wh(800px, auto);
+        div {
+            width: 100%;
 
-            .link-block__link {
-                @extend %tpl_flex;
-                @include wh(800px, 50px);
+            input[type=text] {
+                width: 100%;
+                font-size: 22px;
+                margin: 2px 0;
+                padding: 5px 10px;
+                border: 1px solid rgb(163, 162, 180);
+                border-radius: 5px;
+                background-color: $bg-color;
+            }
 
-                .link__inner {
-                    @extend %tpl_flex;
-                    @include wh(100%, 50px);
+            textarea {
+                width: 100%;
+                font-size: 22px;
+                margin: 2px 0;
+                padding: 5px 10px;
+                border: 1px solid rgb(163, 162, 180);
+                border-radius: 5px;
+                resize: none;
+                background-color: $bg-color;
+            }
+
+            input[type=button] {
+                width: 100%;
+                font-size: 22px;
+                margin: 2px 0;
+                padding: 5px 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: rgb(63, 96, 154);
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(63, 96, 184);
+                }
+
+                &:active {
+                    background-color: rgb(63, 96, 154);
                 }
             }
         }
-    }
-}
 
-.first-block {
-    @extend %tpl_flex;
-    @include wh(100%, 300px);
-
-    .inner-first {
-        @extend %tpl_flex;
-        @include wh(1200px, 100%);
-
-        .left-block, .right-block {
-            @extend %tpl_flex;
-            @include wh(600px, 100%);
-
-            .right-inner {
-                @extend %tpl_flex;
-                @include wh(50%, 100%);
+        .policy {
+            margin-top: 20px;
             
-                .img {
-                    @include wh(40%, auto);
-                }
-                
-                .text_pos {
-                    width: 50%;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-
-    %tpl_block {
-        display: block;
-    }
-
-    .header {
-        @extend %tpl_flex;
-        @include wh(100%, auto);
-    
-        .inner-header {
-            @include wh(100%, 100%);
-            @extend %tpl_block;
-
-            .logo {
-                @extend %tpl_flex;
-                @include wh(100%, 200px);
-            }
-    
-            .link-block {
-                @include wh(100%, auto);
-                @extend %tpl_block;
-
-                .link-block__link {
-                    @include wh(100%, auto);
-                    @extend %tpl_block;
-
-                    .link__inner {
-                        @extend %tpl_flex;
-                        @include wh(100%, 50px);
-                    }
-                }
-            }
-        }
-    }
-
-    .first-block {
-        @extend %tpl_block;
-        @include wh(100%, auto);
-    
-        .inner-first {
-            @extend %tpl_block;
-            @include wh(100%, 100%);
-
-            .left-block, .right-block {
-                @extend %tpl_block;
-                @include wh(100%, auto);
-
-                .right-inner {
-                    @extend %tpl_flex;
-                    @include wh(100%, 100%);
-                
-                    .img {
-                        @include wh(100%, auto);
-                    }
-                    
-                    .text_pos {
-                        width: 100%;
-                        font-size: 14px;
-                    }
-                }
+            a {
+                color: gray;
+                text-decoration: none;
             }
         }
     }
