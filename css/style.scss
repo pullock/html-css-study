@@ -54,6 +54,16 @@ $bg-color: rgb(254, 254, 255);
                 background-color: $bg-color;
             }
 
+            select[name=city] {
+                width: 100%;
+                font-size: 22px;
+                margin: 2px 0;
+                padding: 5px 10px;
+                border: 1px solid rgb(163, 162, 180);
+                border-radius: 5px;
+                background-color: $bg-color;
+            }
+
             textarea {
                 width: 100%;
                 font-size: 22px;
